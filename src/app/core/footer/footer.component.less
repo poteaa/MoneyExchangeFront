@@ -1,0 +1,47 @@
+@import "../../../styles.less";
+
+footer {
+    .border-top();
+    background-color: @main-color;
+    padding: 10px 0;
+}
+
+.info-block {
+    text-align: center;
+}
+
+.info-each {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .info-each {
+        float: left;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.social-network {
+    position: relative;
+    min-width: 200px;
+    .title {
+        text-align: center;
+    }
+}
+
+ul {
+    text-align: center;
+    min-width: 200px;
+    padding-left: 0px;
+    li.square {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: gray;
+        text-decoration: none;
+        list-style: none;
+    }
+}

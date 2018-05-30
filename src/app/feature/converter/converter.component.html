@@ -1,0 +1,39 @@
+<div class="form-wrapper">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 left">
+        <input
+          type="text"
+          id="source"
+          name="source"
+          ngModel
+          placeholder="EUR"
+          required
+          pattern="^\d+(\.\d{1,4})?$"
+          #source="ngModel"
+          (keypress)="onKeyPress($event)">
+          <div class="error" *ngIf="source.invalid && (source.dirty || source.touched)">
+            <div *ngIf="source.errors?.required, else invalidexpression">
+              Field is required
+            </div>
+            <ng-template #invalidexpression>Invalid expression</ng-template>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 right">
+        <input
+          name="target"
+          type="text"
+          name="target"
+          [(ngModel)]="result"
+          disabled
+          placeholder="EU"
+          #target="ngModel">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <button type="submit" [disabled]="!f.valid">CALCULATE</button>
+      </div>
+    </div>
+  </form>
+</div>

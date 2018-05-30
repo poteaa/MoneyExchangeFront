@@ -1,0 +1,37 @@
+@import "../../../styles.less";
+
+.left {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.col-xs-12, .col-sm-6 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.right {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.error {
+    color: #f00;
+    font-size: 0.9em;
+}
+
+.form-wrapper {
+    padding: 90px 0px 20px 0px;
+}
+
+button[type=submit] {
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 576px){
+    .left, .right {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }   
+}

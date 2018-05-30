@@ -1,0 +1,76 @@
+@import "../../../styles.less";
+
+header {
+    position: relative;
+    top: 10px;
+    width: 100%;
+}
+
+.login {
+    text-align: right;
+}
+
+nav {
+    margin-top: 20px !important;
+    margin-top:10px;
+    width: 100%;
+    ul {
+        text-align: center;
+        padding-left: 0;
+        list-style: none;
+        position: relative;
+        li {
+            display:inline-block;
+            width: 130px;
+            background-color: @menu-back-color;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover {
+                text-decoration: none;
+                background-color: @menu-back-color-hover;
+            }
+            a {
+                height: inherit;
+                color: @menu-font-color;
+                text-decoration: none;
+                display: block;
+            }
+        }
+    }
+}
+
+#circle-container {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: gray;
+        border: 3px solid @menu-back-color;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        ul {
+            li {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    #circle-container {
+        height: 80px;
+    }
+}
+
+.active {
+    background-color: @menu-back-color-active !important;
+}

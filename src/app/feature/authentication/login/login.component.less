@@ -1,0 +1,37 @@
+@import "../../../../styles.less";
+
+.login {
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+    background-color: @main-color;
+    text-align: center;
+}
+
+.logout {
+    height: 80px;
+}
+
+input[type=text], input[type=password] {
+    height: 25px;
+    font-size: 0.9em;
+    padding-left: 1px;
+    width: 80%;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#logoutbtn {
+    background-color: gray;
+    color: white;
+    border: 0;
+    &:hover {
+        background-color: #507090;
+        cursor: pointer;
+    }
+}

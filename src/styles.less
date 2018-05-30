@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@main-color: lightgray;
+@menu-font-color: #fff;
+@menu-back-color: #007fff;
+@menu-back-color-active: #474196;
+@menu-back-color-hover: #004aff;
+@disabled-color: #738ba2;
+
+button[type=submit] {
+    background-color: @menu-back-color;
+    color: #fff;
+    border: 0;
+    &:hover {
+        cursor: pointer;
+        background-color: @menu-back-color-hover;
+    }
+    &:disabled {
+        background-color: @disabled-color;
+        cursor: default;
+    }
+}
+
+.border-top {
+    border-top: 2px solid gray;
+}
+
+.border-bottom {
+    border-bottom: 2px solid gray;
+}
