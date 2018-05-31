@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ConverterComponent } from './converter.component';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from './../../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -9,7 +10,8 @@ import { CommonModule } from '@angular/common';
     ],
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        SharedModule
     ],
     exports: [
         ConverterComponent

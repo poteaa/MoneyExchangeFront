@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { InfoItemComponent } from './info-item/info-item.component';
 
 @NgModule({
-    declarations: [InfoItemComponent],
+    declarations: [
+        InfoItemComponent
+    ],
     imports: [
         CommonModule
     ],
-    exports: [InfoItemComponent]
+    exports: [
+        InfoItemComponent]
 })
 export class SharedModule {
     

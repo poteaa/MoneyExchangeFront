@@ -7,7 +7,7 @@
           id="source"
           name="source"
           ngModel
-          placeholder="EUR"
+          placeholder="USD"
           required
           pattern="^\d+(\.\d{1,4})?$"
           #source="ngModel"
@@ -24,9 +24,9 @@
           name="target"
           type="text"
           name="target"
-          [(ngModel)]="result"
+          [ngModel]="result | currency:'EUR':'symbol':'.4'"
           disabled
-          placeholder="EU"
+          placeholder="EUR"
           #target="ngModel">
       </div>
     </div>

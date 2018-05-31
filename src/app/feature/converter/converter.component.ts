@@ -10,13 +10,14 @@ import { Converter } from './shared/converter.model';
 })
 export class ConverterComponent implements OnInit {
   result: number;
+  currencySrcId: number = 1;
   constructor(private converterService: ConverterService) { }
 
   ngOnInit() {
   }
 
   onSubmit(f: NgForm) {
-    this.converterService.convert(1)
+    this.converterService.convert(this.currencySrcId)
       .subscribe((data:Converter) => {
         this.result = f.value.source*data.rates["eur"];
         console.log(data);
