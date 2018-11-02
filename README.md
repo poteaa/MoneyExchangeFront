@@ -1,3 +1,18 @@
+To install and run the application:
+
+1. Create a folder for the source code.
+2. Open Git Bush, go to the folder location and write the following command to download the code
+	git clone https://github.com/poteaa/MoneyExchangeFront.git
+3. In Git Bush go to MoneyExchangeFront and write the following command to install the packages
+	npm install
+4. go to src/environments/environments.ts and change the baseUrl for the backend endpoint in case it has changed
+5. run the following command to start the application using the cli
+	ng serve
+6. Log in at the application:
+	user: diego
+	password: 123
+	
+
 # MoneyExchange
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
