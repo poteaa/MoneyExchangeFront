@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConverterComponent } from './converter.component';
+import { ExchangeConverterComponent } from './exchange-converter.component';
 
-describe('ConverterComponent', () => {
-  let component: ConverterComponent;
-  let fixture: ComponentFixture<ConverterComponent>;
+describe('ExchangeConverterComponent', () => {
+  let component: ExchangeConverterComponent;
+  let fixture: ComponentFixture<ExchangeConverterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConverterComponent ]
+      declarations: [ ExchangeConverterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConverterComponent);
+    fixture = TestBed.createComponent(ExchangeConverterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

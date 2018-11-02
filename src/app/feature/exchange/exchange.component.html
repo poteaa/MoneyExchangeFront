@@ -1,0 +1,11 @@
+<div>
+  <p class="title">Today rates for {{ exchangeRate?.base }}</p>
+  <div class="exchanges-container">
+    <table>
+      <tr *ngFor="let rate of exchangeRate?.rates">
+          <td>{{ rate.name | uppercase}}</td>
+          <td>{{ rate.value | number: '.4' }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

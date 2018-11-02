@@ -1,5 +1,5 @@
-<div *ngIf="!authenticated, else logout" class="login row">
-    <div class="col-xs-12">
+<div *ngIf="!authenticated, else logout" class="login">
+    <!-- <div class="col-xs-12"> -->
         <form (ngSubmit)="onLogin(f)" #f="ngForm">
           <input
             type="text"
@@ -15,12 +15,13 @@
             placeholder="Password"
             ngModel
             required>
-          <button type="submit" [disabled]="!f.valid">Sign In</button>
-          <div *ngIf="error">{{error}}</div>
+          <button type="submit" [disabled]="!f.valid">Login</button>
+          <div *ngIf="error">{{ error }}</div>
         </form>
-    </div>
+    <!-- </div> -->
 </div>
 <ng-template #logout>
+  Hello {{ userName }}
   <div class="logout">
     <button type="button" (click)="onLogout()" id="logoutbtn">Logout</button>
   </div>

@@ -9,8 +9,8 @@ import { DefaultComponent } from './feature/default/default.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
-    { path: 'home', component: HomeComponent, canActivate: [AuthGuardService]},
-    { path: 'currency', component: CurrencyComponent},
+    { path: 'home', component: HomeComponent},
+    { path: 'currency', component: CurrencyComponent, canActivate: [AuthGuardService]},
     { path: 'more', component: CurrencyComponent},
     { path: 'about', component: AboutComponent},
     { path: 'default', component: DefaultComponent},
@@ -20,6 +20,4 @@ const appRoutes: Routes = [
     imports: [RouterModule.forRoot(appRoutes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule { }

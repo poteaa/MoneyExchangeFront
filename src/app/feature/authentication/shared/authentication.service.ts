@@ -1,22 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpBackendService } from '../../../core/services/http-backend.service';
 import { Login } from './login.model';
-import { Authorization } from './authorization';
-import { Observable } from 'rxjs';
+import { AuthenticationResult } from './authentication-result.model';
+import { Observable } from 'rxjs/Observable';
+
 
 @Injectable()
 export class AuthenticationService {
-    private url: string = "login";
+    private readonly loginUrl = 'login';
+    private readonly logoutUrl = 'logout';
 
     constructor(private httpBackendService: HttpBackendService) {}
 
     login(data: Login): Observable<any> {
-        return this.httpBackendService.post<Login>(this.url, data)
-            .map(auth => this.setToken(auth.token));
+        return this.httpBackendService.post<AuthenticationResult, Login>(this.loginUrl, data)
+            .map(auth => {
+                this.setToken(auth.token);
+                return auth;
+            });
     }
 
     logout() {
-        this.deleteToken();
+        const auth: AuthenticationResult = { token: this.getToken(), user: null};
+        this.httpBackendService.post<any, AuthenticationResult>(this.logoutUrl, auth)
+            .subscribe(() => this.deleteToken());
     }
 
     isAuthenticated() {

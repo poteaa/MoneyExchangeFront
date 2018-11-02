@@ -12,6 +12,4 @@ import { InfoItemComponent } from './info-item/info-item.component';
     exports: [
         InfoItemComponent]
 })
-export class SharedModule {
-    
-}
+export class SharedModule { }

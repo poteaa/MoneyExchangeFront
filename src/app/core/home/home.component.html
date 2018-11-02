@@ -1,3 +1,11 @@
 <div class="main-content">
-    <app-converter></app-converter>
+    <div *ngIf="authenticationService.isAuthenticated(); else notloggedcontent">
+        <app-exchange-converter></app-exchange-converter>
+    </div>
+    <ng-template #notloggedcontent>
+        <p>
+            Please login in the application to enable more features.
+        </p>
+    </ng-template>
+    <app-exchange></app-exchange>
 </div>
